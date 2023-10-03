@@ -1,0 +1,358 @@
+:root {
+  --darkreader-neutral-background: #3b306c;
+  --darkreader-neutral-text: #d8d4cf;
+  --darkreader-selection-background: #004daa;
+  --darkreader-selection-text: #e8e6e3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+.app {
+  position: relative;
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    #2e1c4b,
+    var(--darkreader-neutral-background),
+    #dfabb9
+  );
+  background-color: #3b306c;
+  font-family: monospace;
+  color: var(--darkreader-selection-text);
+}
+
+.todo {
+  max-width: 1280px;
+  width: 66.666667%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.todo header {
+  user-select: none;
+}
+
+.todo__title {
+  color: rgb(206, 202, 195);
+  margin-top: 2.5rem;
+  text-align: center;
+  font-size: 48px;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+.todo__creator {
+  color: #e8e6e3;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.25rem;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.todo__creator span {
+  color: #52d7f7;
+}
+
+.todo__date-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 48px;
+}
+
+.todo__date {
+  height: 60px;
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  font-style: italic;
+}
+
+.todo__date-day,
+.todo__date-year {
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--darkreader-neutral-text);
+}
+
+.todo__date-day {
+  align-self: flex-start;
+}
+.todo__date-year {
+  align-self: flex-end;
+  color: var(--darkreader-selection-text);
+}
+
+.todo__time {
+  font-size: 30px;
+}
+
+.todo__date-month {
+  align-self: center;
+  font-size: 48px;
+  font-weight: 700;
+  color: #52d7f7;
+}
+
+.todo__form-container {
+  width: 100%;
+  margin-top: 70px;
+}
+
+.todo__form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.todo__form-input {
+  width: 100%;
+  height: 100%;
+  padding: 10px 15px;
+  font-size: 20px;
+  color: var(--darkreader-neutral-text);
+  background-color: transparent;
+  border-bottom: 2px solid rgb(60, 65, 67);
+  transition: all 0.3s ease;
+}
+
+.todo__form-input:focus {
+  border-bottom: 2px solid var(--darkreader-selection-background);
+}
+
+.todo__form-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 2px solid rgb(60, 65, 67);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.todo__form-btn:hover {
+  color: var(--darkreader-selection-background);
+  border-color: var(--darkreader-selection-background);
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  margin-top: 40px;
+}
+
+.menu__clear-btn {
+  font-size: 20px;
+  font-style: italic;
+  font-family: monospace;
+  background-color: transparent;
+  line-height: 28px;
+  color: #ee9a05;
+  cursor: pointer;
+}
+
+.menu__clear-btn:hover {
+  color: #df3b3b;
+}
+
+.menu__clear__items-left {
+  font-size: 20px;
+  color: rgb(175, 169, 158);
+  line-height: 28px;
+  font-style: italic;
+}
+
+.menu__categories {
+  display: flex;
+  gap: 15px;
+  font-weight: 600;
+  line-height: 28px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.menu__categories li {
+  font-size: 20px;
+  background-color: transparent;
+  color: rgb(53, 215, 239);
+  border-bottom: 2px solid rgb(12, 141, 161);
+  cursor: pointer;
+}
+
+.menu__categories li:active {
+  color: rgb(12, 141, 161);
+  border-color: rgb(12, 141, 161);
+}
+
+.todos {
+  width: 100%;
+  margin-top: 45px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--darkreader-neutral-text);
+}
+.todos__title {
+  font-size: 24px;
+  word-spacing: 4px;
+  font-family: ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--darkreader-selection-text);
+}
+
+.todos__title::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-top: 5px;
+}
+
+.todos__title span {
+  text-transform: capitalize;
+  color: rgb(85, 224, 136);
+  font-weight: 700;
+  padding-left: 5px;
+}
+
+.todos__container {
+  width: 100%;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.todos__item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: rgb(12, 18, 34);
+  color: rgb(232, 230, 227);
+  gap: 16px;
+  border-radius: 5px;
+}
+
+.todos__item-clock {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.todos__item-clock i {
+  font-size: 20px;
+  font-style: normal;
+}
+
+.todos__item-clock span {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 28px;
+}
+
+.todos__item__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  width: 100%;
+}
+
+.todos__item-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid rgb(54, 59, 61);
+  cursor: pointer;
+}
+
+.completed i {
+  font-size: 16px;
+  color: rgb(125, 238, 166);
+}
+
+.active i {
+  display: none;
+}
+
+.todos__item-text {
+  width: 80%;
+  max-width: 80%;
+  /* overflow-x: auto; */
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.todos__item-btns {
+  display: flex;
+  gap: 20px;
+}
+
+.todos__item-btns button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: transparent;
+  color: rgb(248, 107, 107);
+}
+
+@media (max-width: 640px) {
+  .todo {
+    width: 100%;
+  }
+  .todo__title {
+    font-size: 36px;
+  }
+  .todo__creator {
+    font-size: 14px;
+  }
+  .todo__date-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .todo__time {
+    font-size: 24px;
+  }
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .todos__item {
+    flex-direction: column;
+  }
+}

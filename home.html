@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To do list</title>
+    <link rel="stylesheet" href="styles/master.css" />
+    <link
+      rel="stylesheet"
+      href="styles/fontawesome-free-6.3.0-web/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <div class="todo">
+        <header>
+          <h1 class="todo__title">To do List</h1>
+          <p class="todo__creator">by: <span>Khaled Hamdy</span></p>
+          <section class="todo__date-container">
+            <div class="todo__date">
+              <sup class="todo__date-day">17</sup>
+              <span class="todo__date-month">August</span>
+              <sub class="todo__date-year">2023</sub>
+            </div>
+            <div class="todo__time">5:12:48 PM</div>
+          </section>
+        </header>
+        <section class="todo__form-container">
+          <form class="todo__form">
+            <button class="todo__form-btn" type="submit">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <input
+              type="text"
+              class="todo__form-input"
+              placeholder="Add new task"
+            />
+          </form>
+        </section>
+        <section class="menu">
+          <div>
+            <button class="menu__clear-btn">Clear all</button>
+            <p class="menu__clear__items-left">Items left: 0</p>
+          </div>
+          <ul class="menu__categories">
+            <li
+              class="menu__categories__category"
+              onclick="changeCategory('all')"
+            >
+              All
+            </li>
+            <li
+              class="menu__categories__category"
+              onclick="changeCategory('active')"
+            >
+              Active
+            </li>
+            <li
+              class="menu__categories__category"
+              onclick="changeCategory('completed')"
+            >
+              Completed
+            </li>
+          </ul>
+        </section>
+        <secion class="todos">
+          <h2 class="todos__title"><span>All</span> todos</h2>
+          <div class="todos__container"></div>
+        </secion>
+      </div>
+    </div>
+    <script src="scripts/date.js"></script>
+    <script src="scripts/home.js"></script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do Register</title>
+    <link href="styles/output_login.css" rel="stylesheet" />
+  </head>
+  <body class="bg-background-image flex items-center justify-center h-screen">
+    <form class="max-w-[30rem] w-[80%] p-8 backdrop-blur-3xl rounded-xl">
+      <div class="text-center mb-4">
+        <img
+          src="images/avatar.jpg"
+          alt="Avatar"
+          class="w-40 h-40 rounded-full mx-auto"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="uname" class="block text-gray-700 font-bold mb-2">
+          Username
+        </label>
+        <input
+          type="text"
+          id="uname"
+          name="uname"
+          placeholder="Enter Username"
+          class="w-full px-4 py-3 border rounded-lg"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="psw" class="block text-gray-700 font-bold mb-2">
+          Password
+        </label>
+        <input
+          type="password"
+          id="psw"
+          name="psw"
+          placeholder="Enter Password"
+          class="w-full px-4 py-3 border rounded-lg"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="remember" class="flex items-center text-gray-700 font-bold">
+          <input
+            type="checkbox"
+            id="remember"
+            name="remember"
+            class="mr-2"
+            checked
+          />
+          Remember me
+        </label>
+      </div>
+      <div class="flex justify-between items-center gap-4">
+        <button
+          type="submit"
+          class="bg-[#04AA6D] text-white py-2 px-4 rounded-lg w-full hover:bg-[#209478]"
+        >
+          Register
+        </button>
+      </div>
+    </form>
+    <script src="scripts/register.js"></script>
+  </body>
+</html>
